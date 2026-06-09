@@ -1,0 +1,52 @@
+﻿<Window x:Class="RGZ_TIMP.Views.HelpWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Руководство пользователя" Height="600" Width="800"
+        WindowStartupLocation="CenterOwner" Background="#F5F5F5">
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Руководство по работе с Визуализатором" 
+                   FontSize="22" FontWeight="Bold" Margin="0,0,0,20"/>
+
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+            <StackPanel TextBlock.FontSize="14">
+
+                <TextBlock Text="Основные действия" FontWeight="Bold" FontSize="16" Margin="0,0,0,5"/>
+                <TextBlock TextWrapping="Wrap" Margin="0,0,0,15">
+                    • <Run FontWeight="SemiBold">Ручной ввод:</Run> введите числа через пробел в текстовое поле.&#x0a;
+                    • <Run FontWeight="SemiBold">Генерация:</Run> кнопка «ГЕНЕРАЦИЯ» создает случайный набор из 20 чисел (от 10 до 100).&#x0a;
+                    • <Run FontWeight="SemiBold">Выбор алгоритма:</Run> выпадающий список позволяет выбрать алгоритм: Пузырьковая, Выбором, Вставками или Быстрая сортировка.&#x0a;
+                    • <Run FontWeight="SemiBold">Сброс:</Run> кнопка «СБРОС» очищает график, поле ввода и статистику.
+                </TextBlock>
+
+                <TextBlock Text="Управление анимацией" FontWeight="Bold" FontSize="16" Margin="0,0,0,5"/>
+                <TextBlock TextWrapping="Wrap" Margin="0,0,0,15">
+                    • <Run FontWeight="SemiBold">Запуск:</Run> кнопка «СТАРТ» активирует процесс визуализации.&#x0a;
+                    • <Run FontWeight="SemiBold">Пауза:</Run> кнопка позволяет приостановить процесс и возобновить его.&#x0a;
+                    • <Run FontWeight="SemiBold">Скорость:</Run> ползунок справа изменяет скорость анимации (задержку между шагами).&#x0a;
+                    • <Run FontWeight="SemiBold">Индикация:</Run> синие столбцы — обычные элементы; оранжевые — элементы, с которыми сейчас идет работа (сравнение/обмен).
+                </TextBlock>
+
+                <TextBlock Text="Файловые операции (XML)" FontWeight="Bold" FontSize="16" Margin="0,0,0,5"/>
+                <TextBlock TextWrapping="Wrap" Margin="0,0,0,15">
+                    • <Run FontWeight="SemiBold">Загрузить:</Run> загружает массив из XML-файла и отображает его на графике.&#x0a;
+                    • <Run FontWeight="SemiBold">Сохранить:</Run> записывает текущий сгенерированный или введенный массив в XML-файл.
+                </TextBlock>
+
+                <TextBlock Text="Статистика" FontWeight="Bold" FontSize="16" Margin="0,0,0,5"/>
+                <TextBlock TextWrapping="Wrap" Margin="0,0,0,15">
+                    В процессе работы программы под графиком отображаются показатели:&#x0a;
+                    • <Run FontWeight="SemiBold">Сравнений:</Run> количество проверок условий.&#x0a;
+                    • <Run FontWeight="SemiBold">Перестановок:</Run> количество обменов элементов.&#x0a;
+                    • <Run FontWeight="SemiBold">Время:</Run> затраченное на алгоритм время (в мс).
+                </TextBlock>
+
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Window>
